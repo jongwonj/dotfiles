@@ -1,0 +1,58 @@
+# http://editorconfig.org
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+indent_size = 2
+insert_final_newline = true
+trim_trailing_whitespace = true
+max_line_length = 100
+
+# [Python]
+[*.py]
+indent_size = 4
+max_line_length = 88
+
+# [Lua]
+[*.lua]
+indent_size = 2
+max_line_length = 100
+
+# [Vim Script]
+[*.vim]
+indent_size = 2
+max_line_length = 100
+
+# [Data & Configuration]
+[*.{json,jsonc,json5,yaml,yml,toml,xml}]
+indent_size = 2
+
+# [Shell Scripts]
+[*.{sh,bash,zsh,fish}]
+indent_size = 2
+
+# [Makefile]
+# Syntax-critical tab requirement
+[Makefile]
+indent_style = tab
+indent_size = 4
+tab_width = 4
+
+# [Markdown / Documentation]
+[*.md]
+max_line_length = 0
+trim_trailing_whitespace = false
+
+# [Git / Version Control]
+[{COMMIT_EDITMSG,MERGE_MSG,git-rebase-todo}]
+indent_style = space
+indent_size = 2
+max_line_length = 72
+
+[{.gitignore,.gitattributes}]
+indent_style = tab
+indent_size = 4
+tab_width = 4
+max_line_length = off

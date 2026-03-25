@@ -1,0 +1,40 @@
+[core]
+    excludesfile = ~/.gitignore_global
+    eol = native
+    autocrlf = input
+    pager = delta
+
+[user]
+    useConfigOnly = true
+
+[init]
+    defaultBranch = main
+
+[includeIf "gitdir/i:~/proj/personal/"]
+    path = ~/.gitconfig-personal
+
+# ~/.gitconfig-personal
+# [user]
+#     name = {USER_NAME}
+#     email = {EMAIL_ADDRESS}
+
+[includeIf "gitdir/i:~/proj/public/"]
+    path = ~/.gitconfig-public
+
+[includeIf "gitdir/i:~/proj/codeberg/"]
+    path = ~/.gitconfig-codeberg
+
+[includeIf "gitdir/i:~/proj/work/"]
+    path = ~/.gitconfig-work
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true  # use n and N to move between diff sections
+    dark = true      # or light = true, or omit for auto-detection
+    line-numbers = true
+    side-by-side = true
+
+[merge]
+    conflictStyle = zdiff3

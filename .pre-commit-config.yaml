@@ -1,0 +1,56 @@
+---
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+#
+# USAGE:
+# 1. Save this file as .pre-commit-config.yaml in your project root.
+# 2. Run `pre-commit install` once.
+# 3. It will now run automatically on every `git commit`.
+#
+# TO SKIP HOOKS FOR A SINGLE COMMIT:
+#    git commit -m "Your message" --no-verify
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: check-added-large-files
+      - id: detect-private-key
+
+      - id: check-case-conflict
+      - id: check-symlinks
+      - id: check-merge-conflict
+
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: mixed-line-ending
+
+      - id: check-illegal-windows-names
+      - id: check-executables-have-shebangs
+      - id: check-shebang-scripts-are-executable
+
+      - id: check-yaml
+      # - id: check-json
+
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.28.0
+    hooks:
+      - id: gitleaks
+
+  - repo: https://github.com/scop/pre-commit-shfmt
+    rev: v3.12.0-2
+    hooks:
+      - id: shfmt
+
+  - repo: https://github.com/JohnnyMorganz/StyLua
+    rev: v2.3.1
+    hooks:
+      - id: stylua # or stylua-system / stylua-github
+        args: [--config-path, config/nvim/.stylua.toml]
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.15.0
+    hooks:
+      - id: ruff-check
+        args: [--fix]
+      - id: ruff-format

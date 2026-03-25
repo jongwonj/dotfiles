@@ -1,0 +1,61 @@
+# ~/.config/starship.toml
+
+add_newline = false
+
+format = """
+$directory$git_branch$git_status$nodejs$python$kubernetes$docker_context$time$cmd_duration
+$character
+"""
+
+[directory]
+style = "blue bold"
+truncation_length = 3
+
+[git_branch]
+style = "purple"
+
+[git_status]
+style = "red"
+format = '([$all_status$ahead_behind]($style))'
+
+[nodejs]
+format = " [$symbol($version )]($style)"
+style = "green"
+
+[python]
+format = " [$symbol($version )]($style)"
+style = "yellow"
+
+[kubernetes]
+format = ' [⎈ $context( /$namespace)]($style)'
+style = "cyan"
+disabled = false
+
+[[kubernetes.contexts]]
+context_pattern = ".*prod-cluster-name.*"
+context_alias = "PROD"
+style = "red bold"
+
+[[kubernetes.contexts]]
+context_pattern = ".*staging-cluster-name.*"
+context_alias = "STG"
+style = "yellow"
+
+[docker_context]
+format = ' [🐳 $context]($style)'
+style = "blue"
+
+[time]
+disabled = false
+format = " [$time]($style)"
+time_format = "%H:%M"
+style = "dimmed white"
+
+[cmd_duration]
+min_time = 500
+format = " took [$duration]($style)"
+style = "dimmed"
+
+[character]
+success_symbol = "[➜](bold green)"
+error_symbol = "[➜](bold red)"

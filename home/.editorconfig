@@ -1,0 +1,94 @@
+# http://editorconfig.org
+# This configuration covers Systems, Web, Cloud-Native, and DevOps stacks.
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+indent_size = 2
+insert_final_newline = true
+trim_trailing_whitespace = true
+max_line_length = 100
+
+# [C / C++]
+[*.{c,h,cc,cpp,cxx,hpp,hxx,rs,zig}]
+indent_size = 2
+max_line_length = 80
+
+# [Rust / Zig]
+[*.{rs,zig}]
+indent_size = 4
+max_line_length = 80
+
+# [Go]
+# Go standards REQUIRES tabs as per 'go fmt'
+[*.go]
+indent_style = tab
+indent_size = 4
+tab_width = 4
+
+# [Python]
+[*.py]
+indent_size = 4
+max_line_length = 88
+
+# [C# / .NET]
+# Microsoft standard conventions
+[*.{cs,csx,vb,vbx}]
+indent_size = 4
+max_line_length = 120
+
+# [Lua]
+[*.lua]
+indent_size = 2
+max_line_length = 100
+
+# [Vim Script]
+[*.vim]
+indent_size = 2
+max_line_length = 100
+
+# [Web / Frontend / Mobile]
+# React, Vue, Svelte, Next.js, and Mobile (Dart/Flutter)
+[*.{js,jsx,ts,tsx,vue,svelte,css,scss,less,html,dart}]
+indent_size = 2
+
+# [Ruby]
+# Ruby style guide standards
+[*.rb]
+indent_size = 2
+
+# [Data & Configuration]
+[*.{json,jsonc,json5,yaml,yml,toml,xml}]
+indent_size = 2
+
+# [DevOps & Infrastructure]
+[{Dockerfile,*.tf,*.tfvars,*.k8s.yml,*.hcl,*.nomad}]
+indent_size = 2
+
+# [JVM & Android]
+[*.{java,groovy,gradle,kt,kts}]
+indent_size = 4
+max_line_length = 100
+
+# [Shell Scripts]
+[*.{sh,bash,zsh,fish}]
+indent_size = 2
+
+# [Makefile]
+# Syntax-critical tab requirement
+[Makefile]
+indent_style = tab
+indent_size = 4
+tab_width = 4
+
+# [Markdown / Documentation]
+[*.md]
+max_line_length = 0
+trim_trailing_whitespace = false
+
+# [Git / Version Control]
+[{COMMIT_EDITMSG,MERGE_MSG,git-rebase-todo,.gitattributes,.gitignore}]
+indent_size = 2
+max_line_length = 72

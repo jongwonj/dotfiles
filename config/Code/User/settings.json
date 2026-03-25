@@ -1,0 +1,160 @@
+{
+  // ==================================================================
+  // Windows: %APPDATA%\Roaming\Code\User\settings.json
+  // macOS:   $HOME/Library/Application Support/Code/User/settings.json
+  // Linux:   $HOME/.config/Code/User/settings.json
+  // ==================================================================
+
+  "editor.fontSize": 16,
+  "editor.formatOnSave": true,
+
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.lineNumbers": "on",
+  "editor.rulers": [80],
+  "editor.renderWhitespace": "trailing",
+  "editor.cursorBlinking": "solid",
+  "editor.cursorStyle": "block",
+  "editor.wordWrap": "off",
+  "editor.smoothScrolling": false,
+  "editor.scrollBeyondLastLine": false,
+  "files.encoding": "utf8",
+  "files.trimTrailingWhitespace": true,
+
+  "editor.cursorSurroundingLines": 8, // scrolloff
+  "editor.cursorSurroundingLinesStyle": "all",
+  "editor.renderLineHighlight": "line",
+  "editor.fontFamily": "'JetBrainsMono Nerd Font', monospace",
+  "editor.fontLigatures": false,
+  "editor.guides.bracketPairs": true,
+  "editor.codeLens": false,
+  "editor.minimap.enabled": false,
+  "editor.scrollbar.vertical": "visible",
+  "editor.detectIndentation": false,
+  "editor.stickyScroll.enabled": false,
+  "workbench.activityBar.location": "default",
+  "breadcrumbs.enabled": false,
+
+  "vim.leader": "\\",
+  "vim.easymotion": true,
+  "vim.useSystemClipboard": true,
+  "vim.hlsearch": true,
+  "vim.incsearch": true,
+  "vim.smartcase": true,
+  "vim.ignorecase": true,
+  "vim.visualstar": true,
+
+  "vim.insertModeKeyBindings": [
+    { "before": ["j", "k"], "after": ["<Esc>"] },
+    { "before": ["<leader>", "2"], "commands": ["editor.action.triggerSuggest"] },
+    // { "before": ["{", "<CR>"], "after": ["{", "<CR>", "}", "<Esc>", "O"] }
+  ],
+
+  "vim.normalModeKeyBindingsNonRecursive": [
+    { "before": ["g", "c", "c"], "commands": ["editor.action.commentLine"] },
+
+    { "before": [","], "after": [":"] },
+    { "before": ["Q"], "after": ["<Nop>"] },
+    { "before": ["<S-u>"], "after": ["<C-r>"] },
+    { "before": ["<Esc>"], "commands": [":nohl"] },
+    { "before": ["<leader>", "uL"], "commands": ["editor.action.toggleLineNumbers"] },
+    { "before": ["H"], "after": ["^"] }, // Optional
+    { "before": ["L"], "after": ["$"] }, // Optional
+
+    { "before": ["j"], "after": ["g", "j"] },
+    { "before": ["k"], "after": ["g", "k"] },
+    { "before": ["0"], "after": ["g", "0"] },
+    { "before": ["^"], "after": ["g", "^"] },
+    { "before": ["$"], "after": ["g", "$"] },
+
+    { "before": ["n"], "after": ["n", "z", "z"] },
+    { "before": ["N"], "after": ["N", "z", "z"] },
+    { "before": ["*"], "after": ["*", "z", "z"] },
+    { "before": ["#"], "after": ["#", "z", "z"] },
+    { "before": ["g", "D"], "after": ["g", "D", "z", "z"] },
+    { "before": ["G"], "after": ["G", "z", "z"] },
+
+    { "before": ["c"], "after": ["\"", "_", "c"] },
+    { "before": ["C"], "after": ["\"", "_", "C"] },
+    { "before": ["x"], "after": ["\"", "_", "x"] },
+    { "before": ["X"], "after": ["\"", "_", "X"] },
+    { "before": ["s"], "after": ["\"", "_", "s"] },
+    { "before": ["S"], "after": ["\"", "_", "S"] },
+
+    { "before": ["[", "b"], "commands": ["workbench.action.previousEditor"] },  // ]
+    { "before": ["]", "b"], "commands": ["workbench.action.nextEditor"] },
+    { "before": ["[", "t"], "commands": ["workbench.action.previousEditorInGroup"] },  // ]
+    { "before": ["]", "t"], "commands": ["workbench.action.nextEditorInGroup"] },
+    { "before": ["<leader>", "w", "d"], "commands": ["workbench.action.showAllEditors"] },
+
+    { "before": ["<leader>", "w"], "after": ["<C-w>"] },
+    { "before": ["<leader>", "1"], "commands": ["workbench.action.navigateLeft"] },
+    { "before": ["<leader>", "2"], "commands": ["workbench.action.navigateDown"] },
+    { "before": ["<leader>", "3"], "commands": ["workbench.action.navigateUp"] },
+    { "before": ["<leader>", "4"], "commands": ["workbench.action.navigateRight"] },
+
+    { "before": ["<leader>", "5"], "commands": ["workbench.action.moveEditorToLeftGroup"] },
+    { "before": ["<leader>", "6"], "commands": ["workbench.action.moveEditorToBelowGroup"] },
+    { "before": ["<leader>", "7"], "commands": ["workbench.action.moveEditorToAboveGroup"] },
+    { "before": ["<leader>", "8"], "commands": ["workbench.action.moveEditorToRightGroup"] },
+
+    { "before": ["<leader>", "<leader>", "1"], "commands": ["workbench.action.decreaseViewWidth"] },
+    { "before": ["<leader>", "<leader>", "2"], "commands": ["workbench.action.decreaseViewHeight"] },
+    { "before": ["<leader>", "<leader>", "3"], "commands": ["workbench.action.increaseViewHeight"] },
+    { "before": ["<leader>", "<leader>", "4"], "commands": ["workbench.action.increaseViewWidth"] },
+
+    { "before": ["<leader>", "we"], "commands": ["workbench.action.focusActiveEditorGroup"] },
+    { "before": ["<leader>", "wx"], "commands": ["workbench.action.focusSideBar"] },
+    { "before": ["<leader>", "wp"], "commands": ["workbench.action.focusPanel"] },
+    { "before": ["<leader>", "wt"], "commands": ["workbench.action.terminal.focus"] },
+    { "before": ["<leader>", "[", "w"], "commands": ["workbench.action.focusPreviousPart"] },
+    { "before": ["<leader>", "]", "w"], "commands": ["workbench.action.focusNextPart"] },
+
+    { "before": ["<leader>", "c", "n"], "commands": ["editor.action.marker.next"] },
+    { "before": ["<leader>", "c", "p"], "commands": ["editor.action.marker.prev"] },
+    { "before": ["<leader>", "c", "o"], "commands": ["workbench.actions.view.problems"] },
+    { "before": ["<leader>", "c", "c"], "commands": ["workbench.action.closePanel"] },
+
+    { "before": ["<leader>", "]"], "commands": ["editor.action.revealDefinition"] },
+    { "before": ["<leader>", "t"], "commands": ["workbench.action.navigateBack"] },
+
+    { "before": ["<leader>", "y"], "commands": ["editor.action.selectAll", "editor.action.clipboardCopyAction", "cursorUndo"] },
+    { "before": ["<leader>", "="], "commands": ["editor.action.formatDocument"] },
+    { "before": ["<leader>", "v"], "after": ["<C-v>"] },
+    { "before": ["<leader>", "s"], "commands": ["editor.action.startFindReplaceAction"] },
+    { "before": ["<leader>", "b"], "commands": ["workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"] }, // <C-^> alternative
+
+    { "before": ["<leader>", "f", "f"], "commands": ["workbench.action.quickOpen"] }, // Find Files
+    { "before": ["<leader>", " "], "commands": ["workbench.action.quickOpen"] }, // Smart Find
+    { "before": ["<leader>", "/"], "commands": ["workbench.action.findInFiles"] }, // Grep
+    { "before": ["<leader>", ","], "commands": ["workbench.action.showAllEditors"] }, // Buffers
+    { "before": ["<leader>", "ef"], "commands": ["workbench.view.explorer"] }, // Explorer
+    { "before": ["<leader>", "ec"], "commands": ["workbench.files.action.showActiveFileInExplorer"] }
+  ],
+
+  "vim.visualModeKeyBindingsNonRecursive": [
+    { "before": [","], "after": [":"] },
+    { "before": ["g", "c"], "commands": ["editor.action.commentLine"] },
+    { "before": ["p"], "after": ["\"", "_", "d", "P"] },
+    { "before": ["<leader>", "s"], "commands": ["editor.action.startFindReplaceAction"] },
+
+    { "before": ["c"], "after": ["\"", "_", "c"] },
+    { "before": ["C"], "after": ["\"", "_", "C"] },
+    { "before": ["x"], "after": ["\"", "_", "x"] },
+    { "before": ["X"], "after": ["\"", "_", "X"] },
+    { "before": ["s"], "after": ["\"", "_", "s"] },
+    { "before": ["S"], "after": ["\"", "_", "S"] },
+
+    { "before": ["<"], "after": ["<", "g", "v"] },
+    { "before": [">"], "after": [">", "g", "v"] },
+  ],
+
+  // collision avoidance (VS Code first)
+  "vim.handleKeys": {
+    // "<C-n>": false, // For move in file tree <-- Delete for Page Down in Vim
+    "<C-p>": false, // find file
+    "<C-f>": false,
+  },
+
+  "files.insertFinalNewline": true,
+}

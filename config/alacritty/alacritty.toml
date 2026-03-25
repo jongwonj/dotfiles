@@ -1,0 +1,84 @@
+# ~/.config/alacritty/alacritty.toml
+# ----------------------------------------------------------
+
+[colors]
+# Molokai {{{
+[colors.primary]
+background = "#1B1D1E"
+foreground = "#F8F8F2"
+dim_foreground = "#F8F8F2"
+
+[colors.cursor]
+text = "#000000"
+cursor = "#F8F8F0"
+
+[colors.selection]
+text = "CellForeground"
+background = "#403D3D"
+
+[colors.search.matches]
+foreground = "#000000"
+background = "#FFE792"
+
+[colors.normal]
+black = "#1B1D1E"
+red = "#F92672"
+green = "#A6E22E"
+yellow = "#E6DB74"
+blue = "#66D9EF"
+magenta = "#AE81FF"
+cyan = "#66D9EF"
+white = "#F8F8F2"
+
+[colors.bright]
+black = "#7E8E91"
+red = "#F92672"
+green = "#A6E22E"
+yellow = "#E6DB74"
+blue = "#66D9EF"
+magenta = "#AE81FF"
+cyan = "#A1EFE4"
+white = "#F8F8F2"
+
+[colors.dim]
+black = "#333333"
+red = "#F92672"
+green = "#A6E22E"
+yellow = "#E6DB74"
+blue = "#66D9EF"
+magenta = "#AE81FF"
+cyan = "#66D9EF"
+white = "#F8F8F2"
+# }}}
+
+[font]
+size = 13.0
+builtin_box_drawing = true
+
+[font.normal]
+family = "JetBrainsMonoNL Nerd Font Mono"
+style = "Regular"
+
+[font.bold]
+family = "JetBrainsMonoNL Nerd Font Mono"
+style = "Bold"
+
+[font.italic]
+family = "JetBrainsMonoNL Nerd Font Mono"
+style = "Regular"
+# style = "Italic"
+
+[font.bold_italic]
+family = "JetBrainsMonoNL Nerd Font Mono"
+style = "Bold"
+# style = "Bold Italic"
+
+[scrolling]
+history = 10000
+multiplier = 5
+
+[window]
+decorations = "None"       # "Full" | "None"
+startup_mode = "Maximized" # "Windowed" | "Maximized" | "Fullscreen" | "SimpleFullscreen"(macOS only)
+dynamic_padding = true
+dynamic_title = false

@@ -1,0 +1,126 @@
+" =================================
+" Windows: %userprofile%\.ideavimrc
+" macOS:   ~/.ideavimrc
+" Linux:   ~/.ideavimrc
+" =================================
+
+"" ---------------------------------------------------------
+"" 1. Options
+"" ---------------------------------------------------------
+let mapleader = "\\"
+
+set clipboard+=unnamedplus,ideaput
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+set wrapscan
+set scrolloff=8
+set sidescrolloff=8
+set number
+set norelativenumber
+
+set noerrorbells
+set novisualbell
+
+set ideajoin
+set idearefactormode=keep
+
+"" ---------------------------------------------------------
+"" 2. Plugins Emulation
+"" ---------------------------------------------------------
+set surround
+set commentary
+set highlightedyank
+set multiple-cursors " <A-n>
+
+"" ---------------------------------------------------------
+"" 3. Key Mappings
+"" ---------------------------------------------------------
+
+inoremap jk <Esc>
+noremap , :
+noremap <S-u> <C-r>
+
+noremap j gj
+noremap k gk
+noremap 0 g0
+noremap ^ g^
+noremap $ g$
+
+nnoremap n nzz
+nnoremap N Nzz
+nnoremap * *zz
+nnoremap # #zz
+nnoremap gD gDzz
+nnoremap G Gzz
+
+nnoremap <Esc> :nohlsearch<CR>
+
+vnoremap < <gv
+vnoremap > >gv
+
+noremap c "_c
+noremap C "_C
+noremap x "_x
+noremap X "_X
+noremap s "_s
+noremap S "_S
+
+xnoremap p "_dP
+
+noremap <leader>w <C-w>
+
+noremap <leader>1 <C-w>h
+noremap <leader>2 <C-w>j
+noremap <leader>3 <C-w>k
+noremap <leader>4 <C-w>l
+
+nnoremap <leader>5 <C-w>H
+nnoremap <leader>6 <C-w>J
+nnoremap <leader>7 <C-w>K
+nnoremap <leader>8 <C-w>L
+
+nnoremap <leader><leader>1 :vertical resize -20<CR>
+nnoremap <leader><leader>2 :resize -20<CR>
+nnoremap <leader><leader>3 :resize +20<CR>
+nnoremap <leader><leader>4 :vertical resize +20<CR>
+
+nmap [b <Action>(PreviousEditorTab)
+nmap ]b <Action>(NextEditorTab)
+nmap [t <Action>(PreviousEditorTab)
+nmap ]t <Action>(NextEditorTab)
+
+"" ---------------------------------------------------------
+"" 4. LSP & Features
+"" ---------------------------------------------------------
+
+nmap gd <Action>(GotoDeclaration)
+nmap gD <Action>(GotoDeclarationOnly)
+nmap gr <Action>(FindUsages)
+nmap K <Action>(ShowHoverInfo)
+nmap <C-k> <Action>(ParameterInfo)
+
+nmap <leader>cr <Action>(RenameElement)
+nmap <leader>cf <Action>(ReformatCode)
+nmap <leader>ca <Action>(ShowIntentionActions)
+nmap <leader>cd <Action>(ShowErrorDescription)
+
+nmap <leader><space> <Action>(SearchEverywhere)
+nmap <leader>ff <Action>(GotoFile)
+nmap <leader>/ <Action>(FindInPath)
+nmap <leader>, <Action>(RecentFiles)
+
+nmap <leader>rr <Action>(Run)
+
+
+"" ---------------------------------------------------------
+nmap <leader>] <Action>(GotoDeclaration)
+nmap <leader>t <Action>(Back)
+
+nmap <leader>cn <Action>(GotoNextError)
+nmap <leader>cp <Action>(GotoPreviousError)
+nmap <leader>co <Action>(ActivateProblemsViewToolWindow)
+nmap <leader>cc <Action>(HideActiveWindow)
+
+nnoremap <leader>y ggVG"+y

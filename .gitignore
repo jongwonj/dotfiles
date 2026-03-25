@@ -1,0 +1,8 @@
+.DS_Store
+.localized
+.clang-format
+*Brewfile.lock.json
+tags
+Session.vim
+.zshrc.secret
+*.secret
